@@ -23,6 +23,7 @@ if (isset($_GET['q'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Users</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h2>Search Users</h2>
@@ -53,6 +54,6 @@ if (isset($_GET['q'])) {
         </table>
     <?php endif; ?>
 
-    <a href="dashboard.php">Back to Dashboard</a>
+    <br><a href="dashboard.php">Back to Dashboard</a>
 </body>
 </html>

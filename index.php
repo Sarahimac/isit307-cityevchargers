@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CityEVChargers - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         body { font-family: Arial, sans-serif; max-width: 500px; margin: 50px auto; }
         input { display: block; margin-bottom: 10px; width: 100%; padding: 8px; }
@@ -48,6 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         <button type="submit" name="login">Login</button>
     </form>
 
-    <p>Don't have an account? <a href="register.php">Register here</a></p>
+    <br><p>Don't have an account? <a href="register.php">Register here</a></p>
 </body>
 </html>

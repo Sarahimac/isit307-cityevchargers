@@ -21,14 +21,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $result['message'];
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Location</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2>Add New Charging Location</h2>
+    <?php if ($message) echo "<p>$message</p>"; ?>
+    <form method="POST">
+        <input type="text" name="description" placeholder="Location Description" required><br>
+        <input type="number" name="total_stations" placeholder="Total Stations" required><br>
+        <input type="number" step="0.01" name="cost_per_hour" placeholder="Cost per Hour" required><br>
+        <button type="submit">Add Location</button>
+    </form>
 
-<h2>Add New Charging Location</h2>
-<?php if ($message) echo "<p>$message</p>"; ?>
-<form method="POST">
-    <input type="text" name="description" placeholder="Location Description" required><br>
-    <input type="number" name="total_stations" placeholder="Total Stations" required><br>
-    <input type="number" step="0.01" name="cost_per_hour" placeholder="Cost per Hour" required><br>
-    <button type="submit">Add Location</button>
-</form>
-
-<a href="dashboard.php">Back to Dashboard</a>
+    <br><a href="dashboard.php">Back to Dashboard</a>
+</body>
+</html>

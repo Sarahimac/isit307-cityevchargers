@@ -5,7 +5,7 @@ require 'config.php';
 require 'classes/Location.php';
 require 'classes/Checkin.php';
 
-if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
+if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit;
 }
@@ -21,6 +21,7 @@ $locations = $locClass->getAllLocations();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charging Locations</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h2>Charging Locations</h2>
@@ -54,6 +55,6 @@ $locations = $locClass->getAllLocations();
         ?>
     </table>
 
-    <a href="dashboard.php">Back to Dashboard</a>
+    <br><a href="dashboard.php">Back to Dashboard</a>
 </body>
 </html>

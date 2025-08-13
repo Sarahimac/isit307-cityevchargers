@@ -17,6 +17,7 @@ $users = $conn->query("SELECT * FROM users ORDER BY id ASC")->fetch_all(MYSQLI_A
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Users</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h2>All Users</h2>
@@ -39,6 +40,6 @@ $users = $conn->query("SELECT * FROM users ORDER BY id ASC")->fetch_all(MYSQLI_A
         <?php endforeach; ?>
     </table>
 
-    <a href="dashboard.php">Back to Dashboard</a>
+    <br><a href="dashboard.php">Back to Dashboard</a>
 </body>
 </html>

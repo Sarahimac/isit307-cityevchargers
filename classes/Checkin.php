@@ -94,7 +94,7 @@ class Checkin {
 
     // List user's current check-ins
     public function getActiveCheckinsById($user_id) {
-        $stmt = $this->conn->prepare("SELECT c.id, l.description, c.checkin_time
+        $stmt = $this->conn->prepare("SELECT c.location_id, l.description, c.checkin_time
                                       FROM checkins c
                                       JOIN locations l ON c.location_id = l.id
                                       WHERE c.user_id=? AND c.checkout_time IS NULL");
