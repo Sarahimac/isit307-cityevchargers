@@ -1,0 +1,29 @@
+# Ignore PHP session files
+*.session
+*.sess
+
+# Ignore logs
+*.log
+
+# Ignore compiled files / caches
+*.cache
+*.tmp
+
+# Ignore database backups / SQL dumps (if any)
+*.sql
+
+# Ignore ZIP archives
+*.zip
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore node_modules if you use any JS tooling
+node_modules/
