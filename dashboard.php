@@ -64,7 +64,6 @@ if ($_SESSION['user_type'] === 'admin') {
             <li><a href="search_location.php">Search Locations</a></li>
             <li><a href="admin_checkin.php">Check-in User</a></li>
             <li><a href="admin_checkout.php">Check-out User</a></li>
-            <li><a href="dashboard.php">View Active Check-ins</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
 
@@ -90,7 +89,6 @@ if ($_SESSION['user_type'] === 'admin') {
             <li><a href="checkin.php">Check-in</a></li>
             <li><a href="checkout.php">Check-out</a></li>
             <li><a href="search_location.php">Search Locations</a></li>
-            <li><a href="dashboard.php">My Check-ins</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
 

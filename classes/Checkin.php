@@ -107,6 +107,8 @@ class Checkin {
 
     // List user's past check-ins
     public function getPastCheckins($user_id) {
+        $id = $description = $checkin_time = $checkout_time = $cost = null;
+
         $stmt = $this->conn->prepare("SELECT c.id, l.description, c.checkin_time, c.checkout_time, c.cost
                                       FROM checkins c
                                       JOIN locations l ON c.location_id = l.id
@@ -114,7 +116,20 @@ class Checkin {
                                       ORDER BY c.checkout_time DESC");
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
-        $res = $stmt->get_result->fetch_all(MYSQLI_ASSOC);
+        
+        $stmt->bind_result($id, $description, $checkin_time, $checkout_time, $cost);
+
+        $res = [];
+        while ($stmt->fetch()) {
+        $res[] = [
+            "id" => $id,
+            "description" => $description,
+            "checkin_time" => $checkin_time,
+            "checkout_time" => $checkout_time,
+            "cost" => $cost
+            ];
+        }
+
         $stmt->close();
         return $res;
     }

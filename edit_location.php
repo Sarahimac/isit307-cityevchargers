@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $total_stations = intval($_POST['total_stations']);
     $cost_per_hour = floatval($_POST['cost_per_hour']);
 
-    $resutl = $locClass->editLocation($_GET['id'], $description, $total_stations, $cost_per_hour);
+    $result = $locClass->editLocation($_GET['id'], $description, $total_stations, $cost_per_hour);
     $message = $result['message'];
     $location = $locClass->getLocationById($_GET['id']); // refresh data
 }

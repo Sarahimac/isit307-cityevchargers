@@ -30,7 +30,7 @@ $locations = $locClass->getAllLocations();
         <a href="list_locations.php?filter=full">Full</a>
     </p>
 
-    <table>
+    <table border="1">
         <tr>
             <th>ID</th>
             <th>Description</th>
