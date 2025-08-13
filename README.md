@@ -125,6 +125,6 @@ This project is for academic purposes (ISIT307 Assignment 2, S3-2025).
 
 ## Author
 
-- [Your Name]
-- [Your Student ID]
+- Sarah
+- 69420
 
